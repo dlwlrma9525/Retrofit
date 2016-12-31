@@ -404,57 +404,51 @@ IPv4가 적용된 디바이스에 당장은 적용불가
 ![](http://dl.dropbox.com/s/drm6ovhlug4ojpu/RouterIP.png)
 
 ## 사설 IP
-
 ![](http://dl.dropbox.com/s/2bpk8ntpdqv9l05/PrivateIP.png)
 
 **하나의 공인 IP가 연결된 공유기 안에서만 할당되는 중복되지 않는 IP주소**
 내선번호의 비유
 
-#### 유동 IP (Dynamic Adress)  
-
+## 유동 IP (Dynamic Adress)  
 ![](http://dl.dropbox.com/s/2eb41hmze6oqz27/DynamicIP0.png)  
 ![](http://dl.dropbox.com/s/u5l6s9tr1ft5rd8/DynamicIP1.png)   
 
-* **통신사가 제공하는 IP 주소가 변화하는 방식**
-* **한정적인 IP주소를 운영하는 방식**  
-* 인터넷을 사용하는 가정용 공인 IP가 모두 해당
-* 컴퓨터에 장시간 네트워킹이 없으면, 통신사는 할당한 공인 IP 회수  
-  그리고 새로운 가입자나 다른 컴퓨터에 할당. 기존의 컴퓨터는 네트워킹을 재개하면 새로운 공인 IP 할당
-* **그러므로, Web Server를 운영할 때에는 웹 호스팅이나, 통신사로 부터 고정 IP를 할당받아 사용해야 한다.**
+**통신사가 제공하는 IP 주소가 변화하는 방식**  
+**한정적인 IP주소를 운영하는 방식**  
+인터넷을 사용하는 가정용 공인 IP가 모두 해당  
+컴퓨터에 장시간 네트워킹이 없으면, 통신사는 할당한 공인 IP 회수    
+그리고 새로운 가입자나 다른 컴퓨터에 할당. 기존의 컴퓨터는 네트워킹을 재개하면 새로운 공인 IP 할당  
+**그러므로, Web Server를 운영할 때에는 웹 호스팅이나, 통신사로 부터 고정 IP를 할당받아 사용해야 한다.**
 
 --------------------------------------------------
 
-### Domain
-
+## Domain
 ![](http://dl.dropbox.com/s/pt7p8lne9tzv89c/DomainName.png)
 ![](http://dl.dropbox.com/s/hnod30ryl2kzye3/DomainSite.png)
 
-**치명적인 단점인 기억하기 어려운 IP 주소를 도메인 네임으로 표현**
-**IP 주소를 사람이 식별하기 쉽도록 문자등으로 변경한 주소**
+**치명적인 단점인 기억하기 어려운 IP 주소를 Domain Name으로 표현**  
+**IP 주소를 사람이 식별하기 쉽도록 문자등으로 변경한 주소**    
+사실, 컴퓨터는 도메인을 통해서 Server에 접속할 수 없고, 오직 IP주소를 통해서만 접속 가능!
 
-* 사실, 컴퓨터는 도메인을 통해서 Server에 접속할 수 없고, 오직 IP주소를 통해서만 접속 가능!
-
-### DNS (Domain Name System)
+## DNS (Domain Name System)
 
 ![](http://www.dropbox.com/s/twtud63naicfgsp/DNS.png)
+**Domain Name이 동작하는 시스템**  
+**Domain Name과 IP주소를 매칭시키고 관리하는 기술**  
 
-**도메인 네임이 동작하는 시스템**
-**도메인 네임과 IP주소를 매칭시키고 관리하는 기술**
-
-* Web Client와 Web Server 사이의 특수한 도메인 네임 Server를 통해 도메인 네임에 매칭된 IP주소 응답
-* 도메인 네임은 구매 후 도메인 네임 Server에 등록해야 한다.  
+Web Client와 Web Server 사이의 특수한 Domain Name Server를 통해 Domain Name에 매칭된 IP주소 응답  
+Domain Name은 구매 후 Domain Name Server에 등록해야 한다.  
 
 --------------------------------------------------
 
-### Port
-
+## Port
 ![](http://dl.dropbox.com/s/68w2huz19aczl7q/Port.png)
 
-* 한글로 항구, 배가 정박하는 곳
-* Client가 특정한 Web Server에 접속했을 때, 정박하는 곳
-* **Port가 필요한 이유는 컴퓨터 내에는 다양한 프로그램이 설치되어 있고**  
-  **각각의 프로그램들은 인터넷에 연결되어 있기 때문에,**   
-  **IP주소 만으로는 컴퓨터만 구분하므로 어떤 프로그램과 통신 해야하는지 구분해야 하기 때문이다.**
+한글로 항구, 배가 정박하는 곳  
+Client가 특정한 Web Server에 접속했을 때, 정박하는 곳  
+**Port가 필요한 이유는 컴퓨터 내에는 다양한 프로그램이 설치되어 있고**    
+**각각의 프로그램들은 인터넷에 연결되어 있기 때문에,**     
+**IP주소 만으로는 컴퓨터만 구분하므로 어떤 프로그램과 통신 해야하는지 구분해야 하기 때문이다.**
 
 ```html
 http://222.109.62.43:80/index.html
@@ -462,22 +456,22 @@ http://222.109.62.43:80/index.html
 
 ![](http://dl.dropbox.com/s/ki1r51ekhydlcs9/PortAddress.png)
 
-* 222.109.62.43 IP 주소를 가진 Web Server에 http 프로토콜로 접속
-  (웹 브라우저는 기본적으로 http 프로토콜로 Web에 접근하므로 http:// 생략하여 표현하기도 함)
-* 80번 Port를 이용 (Port를 생략하면 설정된 Port로 자동 접속)
+222.109.62.43 IP 주소를 가진 Web Server에 http 프로토콜로 접속  
+(웹 브라우저는 기본적으로 http 프로토콜로 Web에 접근하므로 http:// 생략하여 표현하기도 함)  
+80번 Port를 이용 (Port를 생략하면 설정된 Port로 자동 접속)
 
 ![](http://dl.dropbox.com/s/b1abes3bt8pb3uv/PortMySQL.png)
 ![](http://dl.dropbox.com/s/sr9wys86pmzinb8/PortServer.png)
 
-* **인터넷에 연결된 컴퓨터 안에는 대략 65000개의 가상의 문이 있이 있고 Port로 명칭**
-* Port 하나 당 고유한 번호 할당
-* 80번 Port로 Web Server에 접속한다는 것은 **80번 Port를 열고 그 안에 설치된 Web Server에 접속한다는 의미**
-* Web Server는 기본적으로 80번 Port에 설치
+**인터넷에 연결된 컴퓨터 안에는 대략 65000개의 가상의 문이 있이 있고 Port로 명칭**  
+Port 하나 당 고유한 번호 할당  
+80번 Port로 Web Server에 접속한다는 것은 **80번 Port를 열고 그 안에 설치된 Web Server에 접속한다는 의미**
+Web Server는 기본적으로 80번 Port에 설치
 
-### Port Forwarding
-Client가 사설 IP를 할당받은 Web Server에 어떻게 접속할까?
-* 공인 IP가 부여된 공유기가 사설 IP를 할당받은 웹Server가 설치된 컴퓨터에게 토스!
-* 공유기의 관리자 모드에서 설정 (해당 사설 IP의 컴퓨터의 해당 포트로 Client 접속을 토스)
+## Port Forwarding
+Client가 사설 IP를 할당받은 Web Server에 어떻게 접속할까?  
+공인 IP가 부여된 공유기가 사설 IP를 할당받은 웹Server가 설치된 컴퓨터에게 토스!  
+공유기의 관리자 모드에서 설정 (해당 사설 IP의 컴퓨터의 해당 포트로 Client 접속을 토스)  
 
 ![](http://dl.dropbox.com/s/xcbomhlvhdieeco/PortFowarding.png)
 ![](http://dl.dropbox.com/s/wy5800s7r4tl1kc/PortForwardingToss.png)
@@ -487,25 +481,25 @@ Client가 사설 IP를 할당받은 Web Server에 어떻게 접속할까?
 ![](http://dl.dropbox.com/s/er6y7iiljl8gclg/Path.png)
 ![](http://dl.dropbox.com/s/jfzhdrq1zsj9tyy/PathURL.png)
 
-### 절대경로
+## 절대경로
 Web Server와는 상관없는 위치의 리소스를 로드하거나, Web Server의 바깥에 있는 링크로 이동 시 사용
 
-* **절대적인 위치 경로**
-* **나의 위치와 무관한 위치 경로**
-* http://localhost/index.php
-* /index.php
+**절대적인 위치 경로**  
+**나의 위치와 무관한 위치 경로**  
+http://localhost/index.php  
+/index.php  
   - **```/``` 는 경로 상에서 가장 최상위 디렉토리를 의미**
   - http://localhost/ 디렉토리를 의미
 
-절대 경로의 경우, 경로에 따라 URL의 Host 표현이 바뀔수 있다.  
+절대 경로의 경우, 경로에 따라 URL의 Host 표현이 바뀔수 있다.    
 (접속은 IP주소로 했는데 특정 웹 페이지에서 localhost로 바뀔 수 있다..)
 
-### 상대경로
+## 상대경로
 하나의 Web Server 안에 있는 리소스를 로드하거나, 다른 경로에 있는 링크로 이동 시 사용
 
-* **현재 나의 위치에 따라 달라지는 경로**
-* ```../```은 부모 디렉토리 하위의 경로를 의미
-* http://localhost/path/1.html 상에서 ../index.php라는 경로는  
-  path의 부모 디렉토리(여기서는 루트 디렉토리) 상의 index.php를 의미
+**현재 나의 위치에 따라 달라지는 경로**  
+```/```은 부모 디렉토리 하위의 경로를 의미  
+http://localhost/path/1.html 상에서 ../index.php라는 경로는    
+path의 부모 디렉토리(여기서는 루트 디렉토리) 상의 index.php를 의미  
 
 -------------------------------------------------
