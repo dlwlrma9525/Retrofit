@@ -18,5 +18,4 @@ public class Data {
     {
         return "ClassPojo [SearchParkingInfoRealtime = "+SearchParkingInfoRealtime+"]";
     }
-
 }
